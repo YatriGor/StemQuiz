@@ -1,0 +1,97 @@
+.result-table-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.table-title {
+    text-align: center;
+    color: #4ade80;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(21, 21, 21, 0.95);
+    border: 2px solid rgba(74, 222, 128, 0.3);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.result-table th {
+    background: rgba(21, 21, 21, 0.8);
+    color: #4ade80;
+    padding: 1.2rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid rgba(74, 222, 128, 0.3);
+}
+
+.result-table td {
+    padding: 1.2rem;
+    color: #d1d5db;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(74, 222, 128, 0.2);
+    border-right: 1px solid rgba(74, 222, 128, 0.1);
+}
+
+.result-table td:last-child {
+    border-right: none;
+}
+
+.even-row {
+    background: rgba(21, 21, 21, 0.95);
+}
+
+.odd-row {
+    background: rgba(21, 21, 21, 0.85);
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.status-badge.passed {
+    background: rgba(74, 222, 128, 0.1);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+.status-badge.failed {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.no-data {
+    text-align: center;
+    color: #9ca3af;
+    padding: 2rem;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .result-table-container {
+        padding: 1rem;
+    }
+
+    .result-table th,
+    .result-table td {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .table-title {
+        font-size: 1.8rem;
+    }
+} 

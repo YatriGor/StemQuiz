@@ -1,0 +1,119 @@
+.choice-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.choice-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(to right, #4ade80, #22c55e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
+}
+
+.choice-form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.choice-section {
+    background: rgba(21, 21, 21, 0.8);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(74, 222, 128, 0.2);
+    transition: all 0.3s ease;
+}
+
+.choice-section:hover {
+    border-color: rgba(74, 222, 128, 0.6);
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.1);
+}
+
+.choice-section h2 {
+    color: #4ade80;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.choice-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.choice-option {
+    position: relative;
+    cursor: pointer;
+}
+
+.choice-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.choice-label {
+    display: block;
+    padding: 1rem;
+    background: rgba(21, 21, 21, 0.5);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+    border-radius: 0.5rem;
+    text-align: center;
+    color: #d1d5db;
+    transition: all 0.3s ease;
+}
+
+.choice-option input[type="radio"]:checked + .choice-label {
+    background: rgba(74, 222, 128, 0.1);
+    border-color: rgba(74, 222, 128, 0.6);
+    color: #4ade80;
+    box-shadow: 0 0 10px rgba(74, 222, 128, 0.2);
+}
+
+.choice-option:hover .choice-label {
+    border-color: rgba(74, 222, 128, 0.4);
+    transform: translateY(-2px);
+}
+
+.choice-submit {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #151515;
+    background: linear-gradient(45deg, #4ade80, #22c55e);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.choice-submit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .choice-container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .choice-title {
+        font-size: 2rem;
+    }
+
+    .choice-section {
+        padding: 1.5rem;
+    }
+
+    .choice-options {
+        grid-template-columns: 1fr;
+    }
+} 
